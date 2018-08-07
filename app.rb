@@ -7,7 +7,10 @@ class App < Sinatra::Base
   end
 
   post '/' do # receives the form data through params & renders the results page
-    text_from_user = params[:user_text]
+    @analyzed_text = TextAnalyzer.new(params[:user_text])
+    # text_from_user = params[:user_text]
+    #
+    # @analyzed_text = TextAnalyzer.new(text_from_user)
 
     erb :results
   end

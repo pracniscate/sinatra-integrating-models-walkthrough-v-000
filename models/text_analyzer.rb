@@ -1,19 +1,19 @@
 # Your TextAnalyzer model code will go here.
 
 class TextAnalyzer
-  attr_reader :text 
+  attr_reader :text
 
   def initialize(text)
-    @text = text.downcase 
+    @text = text.downcase
   end
 
   def count_of_words
     words = text.split(" ")
-    words.count 
+    words.count
   end
 
   def count_of_vowels
-    text.scan(/[aeoui]/).count 
+    text.scan(/[aeoui]/).count
   end
 
   def count_of_consonants
@@ -35,8 +35,8 @@ class TextAnalyzer
     arr2.each do |key, value|
       if value > biggest.values.first
         biggest = {}
-        biggest[key] = value 
-      end 
+        biggest[key] = value
+      end
     end
 
     biggest
